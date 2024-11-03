@@ -12,9 +12,9 @@ bools = {
 }
 
 DEFAULT_CONFIG = {
-    "DEFAULT_PREFIX": "!!",
+    "DEFAULT_PREFIX": "/",
     "AUTO_SYNC_COMMANDS": True,
-    "OWNER_IDS": "",
+    "OWNER_IDS": "costa",
     "COMMAND_LOG": False,
     "EMBED_COLOR": None,
     "BOT_ADD_REMOVE_LOG": '',
@@ -120,7 +120,7 @@ DEFAULT_CONFIG = {
     "WATCHING_PRESENCES": "",
     "PLAYING_PRESENCES": "",
     "STREAMING_PRESENCES": "",
-    "CUSTOM_STATUS_PRESENCES": "",
+    "CUSTOM_STATUS_PRESENCES": "Num Pode",
 
     ###############
     ### Intents ###
