@@ -1,7 +1,7 @@
-# Use uma imagem baseada no Ubuntu 22.04 para garantir GLIBC 2.38+
+# Use uma imagem baseada no Ubuntu 22.04
 FROM ubuntu:22.04
 
-# Instale o Python 3.10, Java e dependências do sistema
+# Instale Python, Java e dependências
 RUN apt-get update && \
     apt-get install -y python3.10 python3-pip openjdk-11-jdk curl && \
     apt-get clean
@@ -28,3 +28,4 @@ RUN chmod +x /usr/src/app/start.sh
 
 # Comando para iniciar o bot e o LavaLink
 CMD ["/usr/src/app/start.sh"]
+
