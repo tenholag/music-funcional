@@ -1,7 +1,7 @@
-# Use uma imagem Ubuntu mais recente para garantir GLIBC 2.38+
+# Use uma imagem baseada no Ubuntu 22.04 para garantir GLIBC 2.38+
 FROM ubuntu:22.04
 
-# Instale Python 3.10 e outras dependências do sistema
+# Instale o Python 3.10, Java e dependências do sistema
 RUN apt-get update && \
     apt-get install -y python3.10 python3-pip openjdk-11-jdk curl && \
     apt-get clean
@@ -19,7 +19,7 @@ COPY . .
 # Instale dependências do Python
 RUN pip3 install --no-cache-dir -r requirements.txt
 
-# Exponha as portas para o LavaLink e o bot
+# Exponha as portas necessárias
 EXPOSE 8080 2333
 
 # Copiar e dar permissão de execução para o script de inicialização
