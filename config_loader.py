@@ -94,7 +94,7 @@ DEFAULT_CONFIG = {
     ##################################################
     ### Sistema de música - Local lavalink stuffs: ###
     ##################################################
-    "RUN_LOCAL_LAVALINK": False,
+    "RUN_LOCAL_LAVALINK": True,
     "CONNECT_LOCAL_LAVALINK": True,
     "USE_JABBA": False,
     "LAVALINK_ADDITIONAL_SLEEP": 0,
