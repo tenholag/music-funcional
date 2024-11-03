@@ -116,7 +116,7 @@ DEFAULT_CONFIG = {
     ##########################
     ##### Bot presences: #####
     ##########################
-    "LISTENING_PRESENCES": "",
+    "LISTENING_PRESENCES": "Num Pode",
     "WATCHING_PRESENCES": "",
     "PLAYING_PRESENCES": "",
     "STREAMING_PRESENCES": "",
