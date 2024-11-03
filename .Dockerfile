@@ -25,5 +25,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Exponha as portas necessárias
 EXPOSE 8080 2333
 
-# Comando para iniciar o bot Python e o LavaLink
-CMD ["python", "/usr/src/app/main.py"]
+# Copiar e dar permissão de execução para o script de inicialização
+COPY start.sh /usr/src/app/start.sh
+RUN chmod +x /usr/src/app/start.sh
+
+# Alterar o comando para iniciar o script de inicialização
+CMD ["/usr/src/app/start.sh"]
