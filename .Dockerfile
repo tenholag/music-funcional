@@ -1,12 +1,14 @@
-# Use a imagem base Python 3.10 slim
-FROM python:3.10-slim
+# Use uma imagem Ubuntu mais recente para garantir GLIBC 2.38+
+FROM ubuntu:22.04
 
-# Adicione o OpenJDK 11 para rodar o LavaLink
-COPY --from=openjdk:11-jdk-slim /usr/local/openjdk-11 /usr/local/openjdk-11
+# Instale Python 3.10 e outras dependências do sistema
+RUN apt-get update && \
+    apt-get install -y python3.10 python3-pip openjdk-11-jdk curl && \
+    apt-get clean
 
-# Configurar a variável JAVA_HOME
-ENV JAVA_HOME /usr/local/openjdk-11
-RUN update-alternatives --install /usr/bin/java java /usr/local/openjdk-11/bin/java 1
+# Defina o JAVA_HOME
+ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64
+RUN update-alternatives --set java /usr/lib/jvm/java-11-openjdk-amd64/bin/java
 
 # Defina o diretório de trabalho
 WORKDIR /usr/src/app
@@ -14,20 +16,15 @@ WORKDIR /usr/src/app
 # Copie os arquivos do projeto
 COPY . .
 
-# Instale as dependências do sistema e do Python
-RUN apt-get update \
-    && apt-get install -y gcc git libc6 libstdc++6 \
-    && apt-get clean
+# Instale dependências do Python
+RUN pip3 install --no-cache-dir -r requirements.txt
 
-# Instale as dependências do Python listadas em requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Exponha as portas necessárias
+# Exponha as portas para o LavaLink e o bot
 EXPOSE 8080 2333
 
 # Copiar e dar permissão de execução para o script de inicialização
 COPY start.sh /usr/src/app/start.sh
 RUN chmod +x /usr/src/app/start.sh
 
-# Alterar o comando para iniciar o script de inicialização
+# Comando para iniciar o bot e o LavaLink
 CMD ["/usr/src/app/start.sh"]
