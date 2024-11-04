@@ -11,6 +11,16 @@ bools = {
     "none": None
 }
 
+{
+    "lavalink": {
+        "host": "IP_DO_SERVIDOR_REMOTO",
+        "port": 2333,
+        "password": "sua_senha"
+    }
+}
+
+
+
 DEFAULT_CONFIG = {
     "DEFAULT_PREFIX": "/",
     "AUTO_SYNC_COMMANDS": True,
