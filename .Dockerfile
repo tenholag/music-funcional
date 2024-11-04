@@ -1,14 +1,15 @@
-FROM debian:bookworm-slim  # Debian mais recente
+# Use uma versão mais recente do Debian ou Ubuntu
+FROM debian:bookworm-slim
 
-# Instale o OpenJDK 17
+# Instalar o OpenJDK 17
 RUN apt-get update && apt-get install -y openjdk-17-jdk
 
-# Configure o JAVA_HOME e instale outras dependências
+# Definir JAVA_HOME e configurar o caminho de trabalho
 ENV JAVA_HOME /usr/lib/jvm/java-17-openjdk-amd64
 WORKDIR /app
 
 # Copiar o código do bot
 COPY . .
 
-# Comando para iniciar o bot
+# Executar o bot
 CMD ["java", "-jar", "SeuBot.jar"]
