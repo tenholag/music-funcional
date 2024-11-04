@@ -11,13 +11,6 @@ bools = {
     "none": None
 }
 
-{
-    "lavalink": {
-        "host": "IP_DO_SERVIDOR_REMOTO",
-        "port": 2333,
-        "password": "sua_senha"
-    }
-}
 
 
 
