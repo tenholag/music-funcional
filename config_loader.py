@@ -80,7 +80,7 @@ DEFAULT_CONFIG = {
     ##############################################
     ### Sistema de música - Suporte ao spotify ###
     ##############################################
-    "SPOTIFY_CLIENT_ID": = "62ad8cd9dbe0498488e2f32aea02e42b",
+    "SPOTIFY_CLIENT_ID": "62ad8cd9dbe0498488e2f32aea02e42b",
     "SPOTIFY_CLIENT_SECRET": "69de2b76a8164a09a64f82c555379c68",
     "SPOTIFY_PLAYLIST_EXTRA_PAGE_LIMIT": 0,
 
