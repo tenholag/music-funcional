@@ -26,7 +26,7 @@ DEFAULT_CONFIG = {
     "AUTO_ERROR_REPORT_WEBHOOK": '',
     "INTERACTION_COMMAND_ONLY": False,
     "PRESENCE_INTERVAL": 900,
-    #"SOURCE_REPO": "https://github.com/zRitsu/MuseHeart-MusicBot.git",
+    "SOURCE_REPO": "https://github.com/zRitsu/MuseHeart-MusicBot.git",
     "SUPPORT_SERVER": "",
     "ADDITIONAL_BOT_IDS": "",
     "INVITE_PERMISSIONS": 332892794064,
@@ -91,7 +91,7 @@ DEFAULT_CONFIG = {
     "RPC_SERVER": "ws://localhost:$PORT/ws",
     "PORT": None,
     "RPC_PUBLIC_URL": "",
-    "ENABLE_RPC_COMMAND": False,
+    "ENABLE_RPC_COMMAND": True,
     "ENABLE_RPC_AUTH": False,
 
     ##################################################
