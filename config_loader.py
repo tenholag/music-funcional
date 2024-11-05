@@ -4,20 +4,7 @@ from os import environ
 
 import disnake
 from dotenv import dotenv_values
-import os
-import spotipy
-from spotipy.oauth2 import SpotifyClientCredentials
-#################################################################
-# Acesse as variáveis do Railway
-client_id = os.getenv("SPOTIFY_CLIENT_ID")
-client_secret = os.getenv("SPOTIFY_CLIENT_SECRET")
 
-# Configurar a autenticação do Spotify
-sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(
-    client_id=client_id,
-    client_secret=client_secret
-))
-######################################################
 bools = {
     "true": True,
     "false": False,
@@ -93,8 +80,8 @@ DEFAULT_CONFIG = {
     ##############################################
     ### Sistema de música - Suporte ao spotify ###
     ##############################################
-    "SPOTIFY_CLIENT_ID": '',
-    "SPOTIFY_CLIENT_SECRET": '',
+    "SPOTIFY_CLIENT_ID": = os.getenv("SPOTIFY_CLIENT_ID"),
+    "SPOTIFY_CLIENT_SECRET": client_secret = os.getenv("SPOTIFY_CLIENT_SECRET"),
     "SPOTIFY_PLAYLIST_EXTRA_PAGE_LIMIT": 0,
 
     ################################################
