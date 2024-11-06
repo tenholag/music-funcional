@@ -92,7 +92,7 @@ DEFAULT_CONFIG = {
     "PORT": None,
     "RPC_PUBLIC_URL": "",
     "ENABLE_RPC_COMMAND": True,
-    "ENABLE_RPC_AUTH": True,
+    "ENABLE_RPC_AUTH": False,
 
     ##################################################
     ### Sistema de música - Local lavalink stuffs: ###
